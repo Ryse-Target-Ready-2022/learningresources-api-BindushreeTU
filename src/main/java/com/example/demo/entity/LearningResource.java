@@ -1,8 +1,9 @@
 package com.example.demo.entity;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class LearningResource {
+public class LearningResource implements Serializable {
 	private Integer learningResourceId;
     private String productName;
     private String learningResourceName;
