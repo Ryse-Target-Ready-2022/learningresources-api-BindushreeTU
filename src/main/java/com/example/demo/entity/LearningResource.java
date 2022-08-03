@@ -3,14 +3,15 @@ package com.example.demo.entity;
 import java.time.LocalDate;
 
 public class LearningResource {
-	private int id;
-	private String name;
-	private Double costPrice;
+	private Integer learningResourceId;
+    private String productName;
+    private String learningResourceName;
 	private Double sellingPrice;
 	private LearningResourceStatus learningResourceStatus;
 	private LocalDate createdDate;
 	private LocalDate publishedDate;
 	private LocalDate retiredDate;
+	private Double costPrice;
 	
 	public LearningResource() {
     }
@@ -18,8 +19,8 @@ public class LearningResource {
 	public LearningResource(int id, String name, Double costPrice, Double sellingPrice, LearningResourceStatus productStatus,
 			LocalDate createdDate, LocalDate publishedDate, LocalDate retiredDate) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.learningResourceId = id;
+		this.learningResourceName = name;
 		this.costPrice = costPrice;
 		this.sellingPrice = sellingPrice;
 		this.learningResourceStatus = productStatus;
@@ -29,19 +30,19 @@ public class LearningResource {
 	}
 
 	public int getLearningResourceId() {
-		return id;
+		return learningResourceId;
 	}
 
 	public void setLearningResourceId(int id) {
-		this.id = id;
+		this.learningResourceId = id;
 	}
 
 	public String getLearningResourceName() {
-		return name;
+		return learningResourceName;
 	}
 
 	public void setLearningResourceName(String name) {
-		this.name = name;
+		this.learningResourceName = name;
 	}
 
 	public Double getCostPrice() {
