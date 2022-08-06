@@ -21,22 +21,11 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class LearningResourceServiceTests {
-	/**
-     * This will create a dummy LearningResourceRepository object.
-     * By default, it will do nothing when a method is called and returns 'null' if the method has a return value
-     * */
+	
     @Mock
     LearningResourceRepository learningResourceRepository;
 
-    /** below is another way of creating a mock object. In this case, no need to use @MockitoExtension */
-//    LearningResourceRepository learningResourceRepository = Mockito.mock(LearningResourceRepository.class);
-
-    /**
-     * Instead of creating the EmployeeService object manually, we can use @InjectMocks annotation on the employeeRepository field
-     * Mockito will then try to instantiate fields annotated with @InjectMocks by passing all mocks into a constructor.
-     * Note that we need to provide such a constructor for Mockito to work reliably.
-     * If Mockito doesn’t find a constructor, it will try setter injection or field injection, but the cleanest way is still a constructor.
-     * */
+    
     @InjectMocks
     LearningResourceService learningResourceService;
 
