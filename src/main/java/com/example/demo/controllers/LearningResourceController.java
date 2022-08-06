@@ -17,7 +17,7 @@ import com.example.demo.entity.LearningResource;
 import com.example.demo.service.LearningResourceService;
 
 @RestController
-//@RequestMapping("/learningresources/v1")
+@RequestMapping("/learningresources/v1")
 public class LearningResourceController {
 
 	private final LearningResourceService learningResourceService;
@@ -31,7 +31,7 @@ public class LearningResourceController {
         return learningResourceService.getLearningResources();
     }
 	
-	@PostMapping("/")
+	@PostMapping(value="/", consumes = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public void saveLearningResources(@RequestBody List<LearningResource> learningResources){
         learningResourceService.saveLearningResources(learningResources);
